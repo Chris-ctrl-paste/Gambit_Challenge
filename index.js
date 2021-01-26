@@ -29,8 +29,8 @@ console.log("server is running on 9000")
 const axios = require("axios")
 
 
-const url = "http://localhost:9000"
-
+// const url = "http://localhost:9000"
+const url ="http://tuftuf.gambitlabs.fi/feed.txt"
 
 
 
@@ -47,13 +47,13 @@ let TUF_ValueArray = [];
 
 axios.get(url).then(function (response) {
 
-
+// console.log(response)
 const TUF_ValueText = response.data
 
 
 
 
-    TUF_ValueArrays = TUF_ValueText.split("\r\n");
+    TUF_ValueArrays = TUF_ValueText.split("\n");
     TUF_ValueArrays.forEach(function(v, i) {
         if(i == 0)
             TUF_ValueArray[i] = v;
@@ -65,7 +65,7 @@ const TUF_ValueText = response.data
     
 
 
-//  TUF_ValueObject.date = TUF_ValueArray[0];
+
  TUF_ValueObject.MODBUS = {};
  TUF_ValueObject.ERRORS = {};
  TUF_ValueObject.MODBUS["1-2: Flow Rate"] = [TUF_ValueArray[1], TUF_ValueArray[2]];
