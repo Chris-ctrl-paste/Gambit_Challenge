@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 9000
-
+// require = "./api/api"
 
 const fs = require('fs');
 const path = require('path');
@@ -31,10 +31,6 @@ console.log("server is running on 9001")
 
 
 
-// const url = "http://localhost:9001"
-const url ="http://tuftuf.gambitlabs.fi/feed.txt"
-
-
 
 
 
@@ -42,9 +38,23 @@ app.locals.errors = null;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
- 
 
-app.use(require('./routes/feed'))
+const fetchData = require('./api/api.js');
+
+// app.use(require('./routes/feed'))
+
+
+
+// const CronJob = require('cron').CronJob;
+// const job = new CronJob('* * * * * *', function() {
+
+
+
+//   console.log('You will see this message every second');
+// }, null, true, 'America/Los_Angeles');
+// job.start();
+
+
 
 app.listen(PORT,()=>{
    console.log(`Listening on port ${PORT}`)
