@@ -1,0 +1,17 @@
+
+.white {
+    color: white;
+}
+
+.red {
+    color:red !important;
+    margin-left: 5px;
+}
+
+.App_header {
+    color:white;
+}
+
+/* .underLine {
+    text-decoration: underline  white;
+} */

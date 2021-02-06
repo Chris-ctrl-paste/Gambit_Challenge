@@ -9,7 +9,7 @@ const axios = require("axios")
 
 async function fetch() {
 
-// const url = "http://localhost:9001"
+// const url = "http://localhost:9000"
 const url ="http://tuftuf.gambitlabs.fi/feed.txt"
 
 let TUF_ValueArrays = []
@@ -22,7 +22,9 @@ axios.get(url).then(function (response) {
 // console.log(response)
 const TUF_ValueText = response.data
 
-// TUF_ValueArrays = TUF_ValueText.split("\r\n");
+// If it is a text file and not straight from website
+// TUF_ValueArrays = TUF_ValueText.split("\r\n"); 
+
     TUF_ValueArrays = TUF_ValueText.split("\n");
     TUF_ValueArrays.forEach(function(v, i) {
          TUF_ValueArray[i] = v.split(":")[1];
@@ -79,7 +81,7 @@ const TUF_ValueText = response.data
  TUF_ValueObject.MODBUS["92: Working step and Signal Quality."] = TUF_ValueArray[92];
  TUF_ValueObject.MODBUS["93: Upstream strength."] = TUF_ValueArray[93];
  TUF_ValueObject.MODBUS["94: Downstream strength."] = TUF_ValueArray[94];
- TUF_ValueObject.MODBUS["96: Language value number: 0:English，1:Chinese."] = TUF_ValueArray[96];
+ TUF_ValueObject.MODBUS["96: Language value number: 0: English，1: Chinese."] = TUF_ValueArray[96];
  TUF_ValueObject.MODBUS["97-98: The rate of the measured travel."] = [TUF_ValueArray[97], TUF_ValueArray[98]];
  TUF_ValueObject.MODBUS["99-100: Reynolds number."] = [TUF_ValueArray[99], TUF_ValueArray[100]];
  
@@ -91,30 +93,29 @@ const TUF_ValueText = response.data
 //  console.log(TUF_ValueObject.MODBUS)
 //  console.log(TUF_ValueObject.ERRORS)    
 
- const json = JSON.stringify(TUF_ValueObject.MODBUS)
-//  const json = JSON.stringify({ a: TUF_ValueObject.MODBUS }, null, " ");
+const json = JSON.stringify( TUF_ValueObject.MODBUS, null, " ")
 
- fs.writeFile("test.json", json, function(err) {
+
+
+
+
+
+ fs.writeFile("data.json", json, function(err) {
     if (err) {
         console.log(err);
     }
 });
 
-//  console.log(json)
-
 })
 
 }
 
-
-
-
 const CronJob = require('cron').CronJob;
-const job = new CronJob('*/10 * * * *', function() {
+const job = new CronJob('0 0 1 */6 *', function() {
 
 fetch()
 
-  console.log('Every 10min this is going to trigger');
+  console.log('This runs every 6 months');
 }, null, true, 'America/Los_Angeles');
 job.start();
 
@@ -122,7 +123,9 @@ job.start();
 
 
 
-// .catch(e => console.log(e)) 
+
+
+
 
    
 
