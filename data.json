@@ -1,155 +1,161 @@
 {
- "1-2: Flow Rate.": [
-  "63647",
-  "15846"
+ "1-2: Flow Rate: ": [
+  "7579",
+  "48988"
  ],
- "3-4: Energy Flow Rate.": [
-  "37438",
-  "47954"
+ "3-4: Energy Flow Rate: ": [
+  "5064",
+  "48142"
  ],
- "5-6: Velocity.": [
-  "19407",
-  "15737"
+ "5-6: Velocity: ": [
+  "37967",
+  "48877"
  ],
- "7-8: Fluid sound speed.": [
-  "8874",
-  "17584"
+ "7-8: Fluid sound speed: ": [
+  "63814m/s",
+  "17575m/s"
  ],
- "9-10: positive accumulator.": [
-  "23",
-  "0"
- ],
- "11-12: Positive decimal fraction.": [
-  "13971",
-  "16225"
- ],
- "13-14: Negative accumulator.": [
+ "9-10: positive accumulator:": [
   "0",
   "0"
  ],
- "15-16: Negative decimal fraction.": [
+ "11-12: Positive decimal fraction: ": [
+  "24224",
+  "15965"
+ ],
+ "13-14: Negative accumulator: ": [
   "0",
   "0"
  ],
- "17-18: Positive energy accumulator. ": [
-  "1989",
-  "0"
- ],
- "19-20: Positive energy decimal fraction. ": [
-  "57587",
-  "16174"
- ],
- "21-22: Negative energy accumulator. ": -1103,
- "23-24: Negative energy decimal fraction.  ": [
-  "8497",
-  "48788"
- ],
- "25-26: Accumulator LONG.": [
+ "15-16: Negative decimal fraction: ": [
   "0",
   "0"
  ],
- "27-28: Net decimal fraction.": [
+ "17-18: Positive energy accumulator: ": [
+  "87",
+  "0"
+ ],
+ "19-20: Positive energy decimal fraction: ": [
+  "9891",
+  "16221"
+ ],
+ "21-22: Negative energy accumulator: ": -55,
+ "23-24: Negative energy decimal fraction:  ": [
+  "39041",
+  "48994"
+ ],
+ "25-26: Accumulator LONG: ": [
   "0",
   "0"
  ],
- "29-30: Net energy accumulator.": [
-  "3093",
+ "27-28: Net decimal fraction: ": [
+  "0",
   "0"
  ],
- "31-32: Net energy decimal fraction.": [
-  "59025",
-  "16248"
+ "29-30: Net energy accumulator: ": [
+  "144",
+  "0"
  ],
- "33-34: Temperature #1/inlet.": [
-  "14744",
-  "16690"
+ "31-32: Net energy decimal fraction: ": [
+  "48777",
+  "16191"
  ],
- "35-36: Temperature #2/outlet.": [
-  "41664",
-  "16783"
+ "33-34: Temperature #1/inlet: ": [
+  "15568",
+  "16611"
  ],
- "37-38: Analog input AI3.": [
-  "29184",
-  "15772"
+ "35-36: Temperature #2/outlet: ": [
+  "28424",
+  "16534"
  ],
- "39-40: Analog input AI4.": [
-  "51200",
-  "15729"
+ "37-38: Analog input AI3: ": [
+  "7424",
+  "15783"
  ],
- "41-42: Analog input AI5.": [
-  "10922",
+ "39-40: Analog input AI4: ": [
+  "14592",
+  "15758"
+ ],
+ "41-42: Analog input AI5: ": [
+  "5461",
   "49087"
  ],
- "43-44: Current input at AI3.": [
-  "40960",
-  "15476"
+ "43-44: Current input at AI3: ": [
+  "45184",
+  "15493"
  ],
- "45-46: Current input at AI3.": [
-  "48128",
-  "15419"
+ "45-46: Current input at AI3: ": [
+  "36608",
+  "15459"
  ],
- "47-48: Current input at AI3.": [
-  "14592",
-  "15502"
+ "47-48: Current input at AI3: ": [
+  "29184",
+  "15516"
  ],
- "49-50: System password.": [
+ "49-50: System password: ": [
   "0",
   "0"
  ],
- "51: Password for hardware.": [
+ "51: Password for hardware: ": [
   "0",
   "0"
  ],
- "53-55: Calendar (date and time)": [
-  "9267",
-  "775",
-  "6152"
+ "53-55: Calendar (date and time): ": [
+  "6432",
+  "4386",
+  "5889"
  ],
- "56: Day+Hour for Auto-Save.": "0",
- "59: Key to input.": "0",
- "60: Go to Window #.": "255",
- "61: LCD Back-lit lights for number of seconds.": "120",
- "62: Times for the beeper.": "0",
- "62: Pulses left for OCT.": "0",
- "72: Error Code.": "0",
- "77-78: PT100 resistance of inlet.": [
-  "44638",
-  "17104"
+ "56: Day+Hour for Auto-Save: ": "0",
+ "59: Key to input: ": "0",
+ "60: Go to Window #: ": "255",
+ "61: LCD Back-lit lights for number of seconds: ": "120",
+ "62: Times for the beeper: ": "0",
+ "62: Pulses left for OCT: ": "0",
+ "72: Error Code: ": [
+  "4",
+  "hardware failure"
  ],
- "79-80: PT100 resistance of outlet.": [
-  "65427",
-  "17109"
+ "77-78: PT100 resistance of inlet: ": [
+  "35706",
+  "17101"
  ],
- "81-82: Total travel time.": [
-  "52255",
-  "16955"
+ "79-80: PT100 resistance of outlet: ": [
+  "44042",
+  "17099"
  ],
- "83-84: Delta travel time.": [
-  "12000",
-  "16378"
+ "81-82: Total travel time: ": [
+  "0:0:33",
+  "0:0:16"
  ],
- "85-86: Upstream travel time.": [
-  "52233",
-  "16955"
+ "83-84: Delta travel time: ": [
+  "42500",
+  "49530"
  ],
- "87-88: Downstream travel time.": [
-  "52268",
-  "16955"
+ "85-86: Upstream travel time: ": [
+  "0:0:33",
+  "0:0:16"
  ],
- "89-90: Output current.": [
-  "374",
+ "87-88: Downstream travel time: ": [
+  "0:0:33",
+  "0:0:16"
+ ],
+ "89-90: Output current: ": [
+  "2885",
   "16512"
  ],
- "92: Working step and Signal Quality.": "829",
- "93: Upstream strength.": "3475",
- "94: Downstream strength.": "3477",
- "96: Language value number: 0: English，1: Chinese.": "1",
- "97-98: The rate of the measured travel.": [
-  "25478",
-  "17097"
+ "92: Working step and Signal Quality: ": "806",
+ "93: Upstream strength: ": "3501",
+ "94: Downstream strength: ": "3501",
+ "96: Language used in user interface ": [
+  "1",
+  "Chinese"
  ],
- "99-100: Reynolds number.": [
-  "12816",
-  "17503"
+ "97-98: The rate of the measured travel: ": [
+  "43137",
+  "17105"
+ ],
+ "99-100: Reynolds number: ": [
+  "3374",
+  "17839"
  ]
 }

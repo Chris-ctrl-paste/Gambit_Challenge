@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import '../css/Readings.css';
 import axios from 'axios'
 
 function Readings() {
   let [responseData, setResponseData] = useState('');
-  const fetchData = React.useCallback(() => {
+  const fetchData = useCallback(() => {
     axios({
       "method": "GET",
       "url": "http://localhost:9000",
@@ -12,7 +12,7 @@ function Readings() {
     })
     .then((response) => {
       setResponseData(response.data)
-     console.log(response.data)
+    //  console.log(response.data)
     })
     .catch((error) => {
       console.log(error)
@@ -21,7 +21,6 @@ function Readings() {
   useEffect(() => {
     fetchData()
   }, [fetchData])
-
 
 
 
@@ -35,9 +34,13 @@ function Readings() {
       </header>
       {
         Object.keys(responseData).map((key, i) => (
+          
           <p className="underLine" key={i}>
-            <span className="white"> {key}</span>
-            <span className="red">{responseData[key]}</span>
+            
+            <span className="white"> {key} </span>
+            
+            <span className="red"> {responseData[key] + ""  }</span>
+           
           </p>
             )
           )
