@@ -1,0 +1,19 @@
+.header_middle {
+    color:white;
+    display: flex;
+	flex: 1;
+	justify-content: center;
+}
+
+.space {
+    padding-left: 30px;
+}
+
+
+@media only screen and (max-width: 341px) {
+    
+    h1 {
+        font-size:medium
+    }
+    
+  }

@@ -25,26 +25,26 @@ function Readings() {
 
 
   return (
-    <div className="text">
-      <header className="App_header">
-        <h1>
+    <div className="feed">
+      <div className="align">  
+      <h1>
           Reading Data
-        </h1>
-     
-      </header>
-      {
+        </h1>  
+        {
         Object.keys(responseData).map((key, i) => (
-          
+      
           <p className="underLine" key={i}>
             
-            <span className="white"> {key} </span>
+            <span className="align"> {key} </span>
             
-            <span className="red" >  {responseData[key] + ""  }</span>
+            <span className="red" >  {responseData[key]  }</span>
            
           </p>
+        
             )
           )
         }
+          </div>
     </div>
   );
 }

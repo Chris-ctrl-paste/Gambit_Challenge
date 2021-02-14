@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bcd-date": "^2.1.3",
+    "conbaseor": "^1.0.7",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
     "ejs": "^3.1.5",
