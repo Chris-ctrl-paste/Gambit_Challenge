@@ -30,5 +30,6 @@ Hosted on AWS which i always have used, for such things as discordbots or websit
 
 
 Note: Frontend is only display in a mobile friendly way. 
+
 Backend is basically Medusa from the greek mythology, if you choose to view it on mobile, it is on your own risk.
 For the best view of the backend, i recommend the JSONVIEWER extension, unfortunately, this is a thing i totally missed, because of said extension.
