@@ -39,7 +39,7 @@ function Readings() {
             
             <span className="white"> {key} </span>
             
-            <span className="red"> {responseData[key] + ""  }</span>
+            <span className="red" >  {responseData[key] + ""  }</span>
            
           </p>
             )
