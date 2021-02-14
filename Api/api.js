@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const axios = require("axios")
-
+const bcdDate = require('bcd-date');
 
 
 async function fetch() {
@@ -61,7 +61,7 @@ TUF_ValueArrays = TUF_ValueText.split("\r\n");
 
  //comment so it is easier to actually follow, since it was really starting to blend together.
  TUF_ValueObject.MODBUS["51: Password for hardware: "] = [TUF_ValueArray[51], TUF_ValueArray[52]]; //BCD
- TUF_ValueObject.MODBUS["53-55: Calendar (date and time): "] = BCD(TUF_ValueArray[53], TUF_ValueArray[54], TUF_ValueArray[55]); //BCD
+ TUF_ValueObject.MODBUS["53-55: Calendar (date and time): "] = Time(TUF_ValueArray[53], TUF_ValueArray[54], TUF_ValueArray[55]); //BCD
  TUF_ValueObject.MODBUS["56: Day+Hour for Auto-Save: "] = TUF_ValueArray[56]; //BCD
  TUF_ValueObject.MODBUS["59: Key to input: "] = integer(TUF_ValueArray[59]); //INTEGER
  TUF_ValueObject.MODBUS["60: Go to Window #: "] = integer(TUF_ValueArray[60]); //INTEGER
@@ -105,6 +105,7 @@ const json = JSON.stringify( TUF_ValueObject.MODBUS, null, " ")
 }
 
 const CronJob = require('cron').CronJob;
+const { time } = require('console');
 const job = new CronJob('0 0 1 */6 *', function() {
 
 fetch()
@@ -121,19 +122,26 @@ job.start();
 
 
 //BCD CONVERTER AND THIS ONE IS PROBABLY NOT CORRECT.
-function BCD(bcd1, bcd2, bcd3){
+function Time(bcd1, bcd2, bcd3){
 
-    const c = parseInt(bcd3, 10)
-    const c1 = parseInt(bcd1, 10)
-    const c2 = parseInt(bcd2, 10)
+    const c = parseInt(bcd3).toString(16)
+    const c1 = parseInt(bcd1).toString(16)
+    const c2 = parseInt(bcd2).toString(16)
 
    const val = c + c1 + c2
 
+   let buffer = new Buffer.from(`${val}`, 'hex');
+
+   const date   = bcdDate.decode(buffer);
+   let buffers = bcdDate.encode(date);
+   
+   const dates = bcdDate.decode(buffers, true);
+   console.log(dates)
 
 
-
-  return( (val/10*16) + (val%10) );
+  return dates;
 }
+
 
 
 
